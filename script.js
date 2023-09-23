@@ -3,6 +3,15 @@ const APIURL = 'https://api.github.com/users/'
 const main = document.getElementById('main')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
+function getUsers(){
+
+    if(search.value === ''){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please enter Github userName!',
+        });
+    }
 
 async function getUser(username) {
     try {
@@ -78,6 +87,7 @@ function addReposToCard(repos) {
         })
 }
 
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -86,7 +96,14 @@ form.addEventListener('submit', (e) => {
     if(user) {
         getUser(user)
 
-        search.value = ''
+        // search.value = ''
     }
-})
+});
+}
+
+function clearForm() {
+    // Reseting the input field and clear the main content
+    document.getElementById('search').value = '';
+    document.getElementById('main').innerHTML = '';
+}
 

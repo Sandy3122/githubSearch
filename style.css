@@ -22,8 +22,30 @@ body {
   max-width: 700px;
 }
 
-.user-form input {
+.user-form input{
   width: 100%;
+  display: block;
+  background-color: rgb(76, 40, 133);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+    /* background-color: transparent; */
+}
+
+.groupBtn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  width: 48%;
   display: block;
   background-color: #4c2885;
   border: none;
@@ -31,10 +53,19 @@ body {
   color: #fff;
   padding: 1rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   font-family: inherit;
   font-size: 1rem;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover{
+  background-color: #351962;
+}
+
+.main{
+  width: 100%;
 }
 
 .user-form input::placeholder {
@@ -53,7 +84,7 @@ body {
     0 15px 40px rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 3rem;
-  margin: 0 1.5rem;
+  /* margin: 0 1.5rem; */
 }
 
 .avatar {
